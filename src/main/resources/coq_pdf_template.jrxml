@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.5.1.final using JasperReports Library version 6.5.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="coq_pdf_template" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3a82342c-0962-4d39-8e0a-cbf95fd47b52">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="order_details" uuid="2d1d4c7c-f071-496e-9133-923d9faaf193">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<parameter name="reference" class="java.lang.String"/>
+	<parameter name="description" class="java.lang.String"/>
+	<parameter name="lotNumber" class="java.lang.String"/>
+	<parameter name="issuedDate" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="73" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="80" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="13" width="340" height="30" uuid="54667d95-48e4-4e95-9b12-f20bdd2b8307"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="16" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CERTIFICATE OF QUALITY]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="75" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="20" width="100" height="15" uuid="28c180e1-06dc-4b74-b4ea-b1b30a9240f5"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Description         :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="40" width="99" height="15" uuid="59ff0eb7-159f-4c96-9294-c165eab0cf21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lot Number       :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="60" width="100" height="15" uuid="889e071e-6126-4bed-ad86-5f04d3a32f55"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date of Issue       :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="2" width="100" height="15" uuid="28fb3652-7f12-40c1-bc48-2de048657205"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Reference            :]]></text>
+			</staticText>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="181" y="59" width="100" height="16" uuid="41b7b649-fd2b-44d9-ac93-cfce9715e2e3"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{issuedDate}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="1" width="100" height="16" uuid="569217da-bdd7-45f3-90aa-47329eca5dcc"/>
+				<textFieldExpression><![CDATA[$P{reference}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="20" width="100" height="15" uuid="c846ad72-82af-4dc7-96c6-b7583122395b"/>
+				<textFieldExpression><![CDATA[$P{description}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="40" width="100" height="16" uuid="5b5ea1a6-f4a3-4ab8-8287-06cb5a234ffa"/>
+				<textFieldExpression><![CDATA[$P{lotNumber}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="252" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="6" width="341" height="14" uuid="36cb3d37-7310-46e1-b04f-b5783655c725"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[To Whom It May Concern:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="25" width="400" height="16" uuid="c0d79213-5165-4b53-b478-5051047af89e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Milliporo corporation certifres that the part(s) contained in this order:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="44" width="400" height="46" uuid="010f45e1-abee-4694-b6dd-718e51cb4da1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[• Are manufactured (or supplied) by a Millipore facility whose Quality Management System is approved by an accredited registering body to the appropriate ISO 9001 Quality Systems Standard]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="92" width="401" height="18" uuid="8822c5cb-bf73-4910-a0fd-4783eaa9d1c0"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[• Are manufactured in accordance with applicable Millipore Standard Procedures]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="113" width="401" height="17" uuid="1d1ea19f-bdd4-4ccf-9b2f-b771d89219c8"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[• Are tested in accordance with applicable Millipore Quality Specifications]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="133" width="400" height="37" uuid="a3d50bd0-da2a-484b-881a-407db48524c1"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[• Product contact part is of stainloss steel 316 / 3l6L grade and has been electropolishod and passivated]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="173" width="401" height="17" uuid="b76ec40d-928a-4cdd-ba5c-9a4a2b200e71"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[• Gaskets seafs and elastomers are EDA 2l CFR 177 comrpliant for product contact parts]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="193" width="400" height="48" uuid="74b9a4c3-6d7b-4dcf-bc4f-339fe46b895d"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<text><![CDATA[• All valves rneet the requirements of the Purchase Specification and applicable drawing. Value diaphragms have been certified in accordance with FDA 2l CFR 177 regulations where applicable]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="250" splitType="Stretch">
+			<staticText>
+				<reportElement x="80" y="7" width="101" height="23" uuid="b1a6c87c-1312-427c-bdf5-c8bc50f8029f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Best Regards,]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="32" width="98" height="19" uuid="1ccee2f4-8820-43cf-a418-fa8a5fff240e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NK Prasanna]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="81" y="56" width="139" height="19" uuid="4229c1fe-6045-4a2f-be3a-f1f641b9544f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[General Manager Quality]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="89" width="201" height="21" uuid="5877809e-1156-4fa2-af6a-cec30ac001d1"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[Merck Millipore is a division of MERCK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="112" width="201" height="21" uuid="6810de42-77ac-46e6-bbfd-45750351c1c7"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[Merck Millipore ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="135" width="201" height="21" uuid="a7e009f6-5264-4337-8c77-1ed00fa304f5"/>
+				<textElement>
+					<font fontName="SansSerif" size="12"/>
+				</textElement>
+				<text><![CDATA[Millipore (India) pvt. ltd.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="157" width="120" height="76" uuid="aa6a8157-b3d5-4b4e-b09f-fa8785a4194c"/>
+				<text><![CDATA[50A, 2nd Phase,
+Ring Road, Peenya
+Bangalore - 560 058
+Tel: (080) 3922 4000
+Fax: (080) 2839 6345
+www. merck-millipore.com]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="30" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="26" splitType="Stretch"/>
+	</summary>
+</jasperReport>
